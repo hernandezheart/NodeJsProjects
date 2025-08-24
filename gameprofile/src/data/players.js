@@ -102,7 +102,7 @@ export const Players = [
     cardClass: 'card-ara'
   },
   {
-    id: 4,
+    id: 5,
     name: 'Emmanuel Corpuz',
     ign: 'testign',
     profilePic: 'https://static.vecteezy.com/system/resources/previews/036/594/092/non_2x/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg',
