@@ -74,6 +74,35 @@ export const Players = [
   },
   {
     id: 4,
+    name: 'Arabela Raine Alfonso',
+    ign: 'testign',
+    profilePic: 'https://static.vecteezy.com/system/resources/previews/036/594/092/non_2x/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg',
+    games: [
+      { name: 'League of Legends', icon: '⚔️' },
+      { name: 'Dota 2', icon: '🛡️' },
+      { name: 'Starcraft II', icon: '🚀' },
+      { name: 'Hearthstone', icon: '🃏' },
+      { name: 'World of Warcraft', icon: '🗡️' },
+      { name: 'Diablo IV', icon: '👹' },
+      { name: 'Lost Ark', icon: '⚓' },
+      { name: 'Final Fantasy XIV', icon: '🌟' },
+      { name: 'Guild Wars 2', icon: '🏰' },
+      { name: 'Path of Exile', icon: '💎' },
+      { name: 'Teamfight Tactics', icon: '♟️' }
+    ],
+    milestones: [
+      { game: 'League of Legends', achievement: 'Challenger', type: 'rank' },
+      { game: 'Dota 2', achievement: 'Immortal', type: 'rank' },
+      { game: 'Starcraft II', achievement: 'Grandmaster', type: 'rank' },
+      { game: 'Hearthstone', achievement: 'Legend', type: 'rank' },
+      { game: 'WoW', achievement: 'Mythic Raider', type: 'badge' },
+      { game: 'Diablo IV', achievement: 'Paragon 800', type: 'level' },
+      { game: 'Lost Ark', achievement: 'Item Level 1580', type: 'level' }
+    ],
+    cardClass: 'card-ara'
+  },
+  {
+    id: 4,
     name: 'Emmanuel Corpuz',
     ign: 'testign',
     profilePic: 'https://static.vecteezy.com/system/resources/previews/036/594/092/non_2x/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg',
