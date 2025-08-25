@@ -75,20 +75,16 @@ export const Players = [
   {
     id: 4,
     name: 'Arabela Raine Alfonso',
-    ign: 'testign',
+    ign: 'sesamehh',
     profilePic: 'https://static.vecteezy.com/system/resources/previews/036/594/092/non_2x/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg',
     games: [
-      { name: 'League of Legends', icon: '⚔️' },
-      { name: 'Dota 2', icon: '🛡️' },
-      { name: 'Starcraft II', icon: '🚀' },
-      { name: 'Hearthstone', icon: '🃏' },
+      { name: 'Genshin Impact', icon: '⚔️' },
+      { name: 'Valorant', icon: '🛡️' },
+      { name: 'Roblox', icon: '🚀' },
+      { name: 'Stardew Valley', icon: '🃏' },
       { name: 'World of Warcraft', icon: '🗡️' },
       { name: 'Diablo IV', icon: '👹' },
       { name: 'Lost Ark', icon: '⚓' },
-      { name: 'Final Fantasy XIV', icon: '🌟' },
-      { name: 'Guild Wars 2', icon: '🏰' },
-      { name: 'Path of Exile', icon: '💎' },
-      { name: 'Teamfight Tactics', icon: '♟️' }
     ],
     milestones: [
       { game: 'League of Legends', achievement: 'Challenger', type: 'rank' },

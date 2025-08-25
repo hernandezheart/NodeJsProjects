@@ -1,0 +1,38 @@
+.milestones-card {
+  background: #2a2a40;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  color: white;
+}
+
+.milestones-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.milestone-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #33334d;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+}
+
+.milestone-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.milestone-game-name {
+  font-weight: 600;
+}
+
+.milestone-achievement {
+  font-size: 0.9rem;
+  color: #ddd;
+}
