@@ -5,6 +5,7 @@ export const Players = [
     name: "Rhozeth Carl Muyot",
     username: "rhozeth",
     status: "Online",
+    bio: "Gamer, Developer, Content Creator",
     avatarUrl: "https://placehold.co/90x90",
     games: [
       { name: "Elden Ring",  cover: "https://placehold.co/300x200?text=Elden+Ring",  hours: 350 },
@@ -15,10 +16,11 @@ export const Players = [
     ],
   },
   {
-    code: "bestfriend",
-    name: "Patchot",
+    code: "member2",
+    name: "Heart Hernandez",
     username: "patchot",
     status: "Offline",
+    bio: "Casual Gamer",
     avatarUrl: "https://placehold.co/90x90",
     games: [
       { name: "Minecraft",   cover: "https://placehold.co/300x200?text=Minecraft",   hours: 500 },
@@ -29,10 +31,11 @@ export const Players = [
     ],
   },
   {
-    code: "classmate1",
-    name: "Classmate One",
-    username: "c1",
+    code: "member3",
+    name: "Arabela Raine Alfonso",
+    username: "sesamehh",
     status: "Online",
+    bio: "Gamer, Developer, Content Creator",
     avatarUrl: "https://placehold.co/90x90",
     games: [
       { name: "LoL",         cover: "https://placehold.co/300x200?text=LoL",         hours: 250 },
@@ -43,10 +46,11 @@ export const Players = [
     ],
   },
   {
-    code: "classmate2",
-    name: "Classmate Two",
-    username: "c2",
+    code: "member4",
+    name: "Jan Ryza Bacsal",
+    username: "Azelea",
     status: "Offline",
+    bio: "Gamer, Developer, Content Creator",
     avatarUrl: "https://placehold.co/90x90",
     games: [
       { name: "Starfield",   cover: "https://placehold.co/300x200?text=Starfield",   hours: 55  },
@@ -57,10 +61,11 @@ export const Players = [
     ],
   },
   {
-    code: "classmate3",
-    name: "Classmate Three",
-    username: "c3",
+    code: "member5",
+    name: "Emmanuel Corpuz",
+    username: "emman",
     status: "Online",
+    bio: "Gamer, Developer, Content Creator",
     avatarUrl: "https://placehold.co/90x90",
     games: [
       { name: "Fortnite",    cover: "https://placehold.co/300x200?text=Fortnite",    hours: 95  },

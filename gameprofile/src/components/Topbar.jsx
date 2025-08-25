@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function Topbar() {
+function Topbar({ onSearch }) {
   return (
     <header className="topbar">
       <div className="brand">
@@ -17,7 +18,8 @@ function Topbar() {
 
       <div className="actions">
         <div className="search">
-          <input type="text" placeholder="Search games..." />
+          <input type="text" placeholder="Type an account..." 
+          onChange={(e) => onSearch(e.target.value)}/>
         </div>
         <button className="icon-btn">🔔</button>
         <img
@@ -29,5 +31,9 @@ function Topbar() {
     </header>
   );
 }
+
+Topbar.propTypes = {
+  onSearch: PropTypes.func.isRequired,
+};
 
 export default Topbar;

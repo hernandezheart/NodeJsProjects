@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Sidebar({ avatarUrl, name, username, status }) {
+function Sidebar({ avatarUrl, name, username, status, bio, friends }) {
   const links = [
     { label: "Dashboard", icon: "🏠", active: true }
   ];
@@ -25,6 +25,8 @@ function Sidebar({ avatarUrl, name, username, status }) {
             Offline
           </span>
         </div>
+        {/* Bio below status */}
+        {bio && <p className="profile-bio">{bio}</p>}
       </div>
 
       <div className="side-nav">
@@ -36,6 +38,23 @@ function Sidebar({ avatarUrl, name, username, status }) {
             {link.icon} {link.label}
           </button>
         ))}
+
+        {/* Friends list below dashboard */}
+        {friends && friends.length > 0 && (
+          <div className="friends-list">
+            <h4>Friends</h4>
+            {friends.map((friend, idx) => (
+              <div key={idx} className="friend-item">
+                <img
+                  src={friend.avatarUrl || "https://placehold.co/36x36"}
+                  alt={friend.name}
+                  className="avatar sm"
+                />
+                <span>{friend.name}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </aside>
   );
@@ -46,6 +65,13 @@ Sidebar.propTypes = {
   name: PropTypes.string,
   username: PropTypes.string,
   status: PropTypes.oneOf(["Online", "Offline"]),
+  bio: PropTypes.string,
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      avatarUrl: PropTypes.string,
+    })
+  ),
 };
 
 Sidebar.defaultProps = {
@@ -53,6 +79,8 @@ Sidebar.defaultProps = {
   name: "Player One",
   username: "gamer123",
   status: "Online",
+  bio: "",
+  friends: [],
 };
 
 export default Sidebar;

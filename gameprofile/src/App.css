@@ -101,7 +101,7 @@
 .profile-card{ display:flex; flex-direction:column; align-items:center; gap:10px; margin-bottom:18px }
 .profile-name{ font-weight:700; font-size:18px }
 .profile-sub{ color:var(--muted); font-size:12px }
-.toggle-row{ display:flex; align-items:center; gap:8px; margin-top:8px; color:var(--muted) }
+.toggle-row{ display:flex; justify-content: center; align-items:center; gap:8px; margin-top:8px; color:var(--muted) }
 .toggle-pill{
   padding:6px 10px; background:var(--panel-2); border:1px solid var(--line);
   border-radius:999px; font-size:12px;
@@ -125,6 +125,42 @@
 .btn.wide{ width:100%; margin-top:10px }
 
 .content{ min-height:60vh }
+
+/* Sidebar Bio */
+.profile-bio {font-size: 13px; color: var(--muted); text-align: center; margin-top: 6px; line-height: 1.4; max-width: 220px;}
+
+/* Friends list */
+.friends-list {display: flex; flex-direction: column; gap: 8px; margin-top: 18px;}
+
+.friends-list h4 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 4px;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: var(--panel-2);
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 6px;
+}
+
+.friend-item:hover {
+  background: var(--panel);
+}
+
+.friend-item .avatar.sm {
+  border: 1px solid var(--line);
+}
+
 
 /* Hero */
 .hero{
