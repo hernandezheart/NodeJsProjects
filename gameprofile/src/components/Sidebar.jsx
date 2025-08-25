@@ -1,109 +1,63 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { Search } from 'lucide-react';
-import { Players } from '../data/players';
-import './Sidebar.css';
+import React from "react";
+import PropTypes from "prop-types";
 
-const Sidebar = ({ onPlayerSelect, selectedPlayer, isOpen, onToggle }) => {
-  const [searchTerm, setSearchTerm] = useState('');
-  
-  const filteredPlayers = Players.filter(player =>
-    player.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    player.ign.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+function Sidebar({ avatarUrl, name, username, status }) {
+  const links = [
+    { label: "Dashboard", icon: "🏠", active: true },
+    { label: "My Games", icon: "🎮" },
+    { label: "Friends", icon: "👥" },
+    { label: "Settings", icon: "⚙" },
+  ];
 
   return (
-    <>
-      {/* Sidebar Toggle Button */}
-      {!isOpen && (
-        <button
-          onClick={onToggle}
-          className="sidebar-toggle-button"
-        >
-          <Search className="sidebar-toggle-icon" />
-        </button>
-      )}
+    <aside className="sidebar">
+      <div className="profile-card">
+        <img
+          src={avatarUrl}
+          alt="profile"
+          className="avatar xl floating-avatar"
+        />
+        <span className="profile-name">{name}</span>
+        <span className="profile-sub">@{username}</span>
 
-      {/* Sidebar */}
-      <div className={`sidebar ${isOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
-        <div className="sidebar-content">
-          {/* Header with Close Button */}
-          <div className="sidebar-header">
-            <h2 className="sidebar-title">
-              <Search className="sidebar-title-icon" />
-              Profile Viewer
-            </h2>
-            <button
-              onClick={onToggle}
-              className="sidebar-close-button"
-            >
-              &times;
-            </button>
-          </div>
-          
-          {/* Search Bar */}
-          <div className="search-bar-container">
-            <Search className="search-icon" />
-            <input
-              type="text"
-              placeholder="Search players..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="search-input"
-            />
-          </div>
-
-          {/* Player List */}
-          <div className="player-list">
-            {filteredPlayers.length > 0 ? (
-              filteredPlayers.map(player => (
-                <div
-                  key={player.id}
-                  onClick={() => {
-                    onPlayerSelect(player);
-                    onToggle();
-                  }}
-                  className={`player-item ${selectedPlayer?.id === player.id ? 'player-item-selected' : ''}`}
-                >
-                  <div className="player-info-container">
-                    <img
-                      src={player.profilePic}
-                      alt={player.name}
-                      className="player-profile-pic"
-                    />
-                    <div className="player-details">
-                      <p className="player-name">{player.name}</p>
-                      <p className="player-ign-small">@{player.ign}</p>
-                    </div>
-                  </div>
-                </div>
-              ))
-            ) : (
-              <div className="no-players-found">
-                <p>No players found</p>
-              </div>
-            )}
-          </div>
+        <div className="toggle-row">
+          <span className={`toggle-pill ${status === "Online" ? "active" : ""}`}>
+            Online
+          </span>
+          <span className={`toggle-pill ${status === "Offline" ? "active" : ""}`}>
+            Offline
+          </span>
         </div>
       </div>
 
-      {/* Backdrop */}
-      {isOpen && (
-        <div
-          className="backdrop"
-          onClick={onToggle}
-        />
-      )}
-    </>
+      <div className="side-nav">
+        {links.map((link, index) => (
+          <button
+            key={index}
+            className={`side-link ${link.active ? "active" : ""}`}
+          >
+            {link.icon} {link.label}
+          </button>
+        ))}
+      </div>
+
+      <button className="btn wide">+ Add Game</button>
+    </aside>
   );
+}
+
+Sidebar.propTypes = {
+  avatarUrl: PropTypes.string,
+  name: PropTypes.string,
+  username: PropTypes.string,
+  status: PropTypes.oneOf(["Online", "Offline"]),
 };
 
-// Validation
-Sidebar.propTypes = {
-  onPlayerSelect: PropTypes.func.isRequired,
-  selectedPlayer: PropTypes.object,
-  isOpen: PropTypes.bool.isRequired,
-  onToggle: PropTypes.func.isRequired,
+Sidebar.defaultProps = {
+  avatarUrl: "https://placehold.co/90x90",
+  name: "Player One",
+  username: "gamer123",
+  status: "Online",
 };
 
 export default Sidebar;
