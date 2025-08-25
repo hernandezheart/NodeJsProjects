@@ -11,11 +11,8 @@ function Topbar() {
         </div>
       </div>
 
+      {/*tinanggal ko ang laman, di ko malaman san css para maremain ko ung search sa far right hoho*/}
       <nav className="tabs">
-        <button className="tab active">Home</button>
-        <button className="tab">Games</button>
-        <button className="tab">Friends</button>
-        <button className="tab">Settings</button>
       </nav>
 
       <div className="actions">

@@ -3,10 +3,7 @@ import PropTypes from "prop-types";
 
 function Sidebar({ avatarUrl, name, username, status }) {
   const links = [
-    { label: "Dashboard", icon: "🏠", active: true },
-    { label: "My Games", icon: "🎮" },
-    { label: "Friends", icon: "👥" },
-    { label: "Settings", icon: "⚙" },
+    { label: "Dashboard", icon: "🏠", active: true }
   ];
 
   return (
@@ -40,8 +37,6 @@ function Sidebar({ avatarUrl, name, username, status }) {
           </button>
         ))}
       </div>
-
-      <button className="btn wide">+ Add Game</button>
     </aside>
   );
 }
