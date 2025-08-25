@@ -72,9 +72,11 @@
 .card-display-area {
   height: calc(100vh - 10.625rem);
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* push cards down a bit */
   justify-content: center;
+  padding-top: 2rem; /* extra spacing from top */
 }
+
 
 .player-card-wrapper {
   width: 100%;
