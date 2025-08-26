@@ -44,16 +44,9 @@ export const Players = [
     code: "member2",
     name: "Heart Hernandez",
     username: "goozart",
-<<<<<<< HEAD
     status: "Online",
     bio: "quack quack",
     avatarUrl: "https://scontent.fmnl4-1.fna.fbcdn.net/v/t39.30808-6/480805951_1689258051969002_120274337568902222_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGteieFw_cQYaoW0Zx-nyMBt6iPA-9AMGK3qI8D70AwYi7_JB2i-3FVtxUV3T4U1YEZJn-b8eaCNyP2uQLmyJQG&_nc_ohc=RiWT4cZm_CQQ7kNvwE7Zkdd&_nc_oc=AdmTCnxz54M_V7x_ZsXIVoLtTm0YsphS66zJc3JaxZQmsEU9WrZWergdEj5ph4S7jJA&_nc_zt=23&_nc_ht=scontent.fmnl4-1.fna&_nc_gid=MsW4pTsWUWsfTg_r-SNvdQ&oh=00_AfX_PGh4jaPKeaaRWycRpCBtPWHgt79-E0xluq_daOZ8wQ&oe=68B369E4",
-=======
-    status: "Offline",
-    bio: "Casual Gamer",
-    avatarUrl: "https://placehold.co/90x90",
-    heroImage: "https://placehold.co/300x200", // fallback
->>>>>>> 278e8f7fde60358c54f15dc63b3dc93d7b5c3a63
     games: [  
       { name: "GTA V",          cover: "https://wallpapersok.com/images/high/4k-gta-5-logo-on-plane-above-los-santos-vi4dn38abgxw74qn.jpg",   hours: 348 },
       { name: "FiveM",          cover: "https://scontent.fmnl4-4.fna.fbcdn.net/v/t39.30808-6/465923794_10223383321006323_4841337855170187016_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeE_KEdms7ga47ebLgVGq-dffITKGf1eNrt8hMoZ_V42u-thIXp9NQP-h-fbBqAF6pT4lfxRErzdnaBjwjM_-BXw&_nc_ohc=zAgRsowU3DMQ7kNvwGgpLrz&_nc_oc=Adn1LbnbcxuFpokEVxvDRsODaJ83v8g4BEnxs3ez0sS4nWNhhn2b0sA1cPFjQ8IPabA&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&_nc_gid=FhTFCgdFpO9nf3zJnR9jww&oh=00_AfXgqF2ra8CGrEuAlxRnrh9Hpt3SoL5mu5Z0Vb6nQYrD3w&oe=68B33DF9",       hours: 237 },
@@ -126,11 +119,11 @@ export const Players = [
     avatarUrl: "https://placehold.co/90x90",
     heroImage: "https://placehold.co/300x200", // fallback
     games: [
-      { name: "Fortnite",    cover: "https://placehold.co/300x200?text=Fortnite",    hours: 95  },
-      { name: "PUBG",        cover: "https://placehold.co/300x200?text=PUBG",        hours: 180 },
+      { name: "Valorant",    cover: " https://wallpapers.com/images/featured/valorant-thumbnail-gtrf9127f9y5jxm3.jpg",    hours: 95  },
+      { name: "PUBG",        cover: "https://e1.pxfuel.com/desktop-wallpaper/223/615/desktop-wallpaper-gaming-pubg-mobile-thumbnail-youtube.jpg",        hours: 180 },
       { name: "COD",         cover: "https://placehold.co/300x200?text=COD",         hours: 260 },
-      { name: "Apex",        cover: "https://placehold.co/300x200?text=Apex",        hours: 70  },
-      { name: "Halo",        cover: "https://placehold.co/300x200?text=Halo",        hours: 25  },
+      { name: "CSGO",        cover: "https://placehold.co/300x200?text=Apex",        hours: 70  },
+      { name: "Poi",        cover: "https://placehold.co/300x200?text=Halo",        hours: 25  },
     ],
     milestones: [
       "Achieved clutch in Valorant",
