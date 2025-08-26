@@ -1,44 +1,59 @@
+import Rho from "../assets/Rho.jpg";
+import Valorant from "../assets/Valorant.jpg";
+import Minecraft from "../assets/Minecraft.png";
+import BG3 from "../assets/BG3.jpg";
+import LOL from "../assets/LOL.jpg";
+import Warframe from "../assets/Warframe.jpg";
+import Roblox from "../assets/Roblox.jpg";
+import Overwatch from "../assets/Overwatch.png";
+import Marvel from "../assets/Marvel.jpg";
+import Sims from "../assets/Sims.jpg";
+import Viper from "../assets/Viper.png";
+
+
+
 // Uses the same shape your components expect
 export const Players = [
   {
     code: "member1",
     name: "Rhozeth Carl Muyot",
-    username: "rhozeth",
+    username: "Croakie",
     status: "Online",
     bio: "Gamer, Developer, Content Creator",
-    avatarUrl: "https://placehold.co/90x90",
+    avatarUrl: Rho,
+    heroImage: Viper, // fallback
     games: [
-      { name: "Elden Ring",  cover: "https://placehold.co/300x200?text=Elden+Ring",  hours: 350 },
-      { name: "Valorant",    cover: "https://placehold.co/300x200?text=Valorant",    hours: 120 },
-      { name: "Minecraft",   cover: "https://placehold.co/300x200?text=Minecraft",   hours: 410 },
-      { name: "Stardew",     cover: "https://placehold.co/300x200?text=Stardew",     hours: 85  },
-      { name: "Apex",        cover: "https://placehold.co/300x200?text=Apex",        hours: 60  },  
-      { name: "Valorant",    cover: "https://placehold.co/300x200?text=Valorant",    hours: 120 },
-      { name: "Minecraft",   cover: "https://placehold.co/300x200?text=Minecraft",   hours: 410 },
-      { name: "Stardew",     cover: "https://placehold.co/300x200?text=Stardew",     hours: 85  },
-      { name: "Apex",        cover: "https://placehold.co/300x200?text=Apex",        hours: 60  },
-      { name: "Apex",        cover: "https://placehold.co/300x200?text=Apex",        hours: 60  },
-      
+      { name: "Valorant",            cover: Valorant,     hours: 350 },
+      { name: "Minecraft",           cover: Minecraft,    hours: 512 },
+      { name: "Baldur's Gate 3",     cover: BG3,          hours: 400  },
+      { name: "LOL",                 cover: LOL,          hours: 300  },
+      { name: "The Sims 4",          cover: Sims,         hours: 240  },  
+      { name: "Warframe",            cover: Warframe,     hours: 174 },
+      { name: "Marvel Rivals",       cover: Marvel,       hours: 120  },
+      { name: "Roblox",              cover: Roblox,       hours: 870 },
+      { name: "Overwatch",           cover: Overwatch,    hours: 85  },
     ],
     milestones: [
       "Achieved clutch in Valorant",
       "Defeated the Ender Dragon in Minecraft",
-      "Completed Elden Ring without dying",
-      "Defeated the Ender Dragon in Minecraft",
-      "Completed Elden Ring without dying",
-      "Defeated the Ender Dragon in Minecraft",
-      "Completed Elden Ring without dying",
-      "Defeated the Ender Dragon in Minecraft",
-      "Completed Elden Ring without dying",
+      "Got an Ace in Valorant",
+      "30 Assists in a single match of Marvel Rivals",
     ],
   },
   {
     code: "member2",
     name: "Heart Hernandez",
     username: "goozart",
+<<<<<<< HEAD
     status: "Online",
     bio: "quack quack",
     avatarUrl: "https://scontent.fmnl4-1.fna.fbcdn.net/v/t39.30808-6/480805951_1689258051969002_120274337568902222_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGteieFw_cQYaoW0Zx-nyMBt6iPA-9AMGK3qI8D70AwYi7_JB2i-3FVtxUV3T4U1YEZJn-b8eaCNyP2uQLmyJQG&_nc_ohc=RiWT4cZm_CQQ7kNvwE7Zkdd&_nc_oc=AdmTCnxz54M_V7x_ZsXIVoLtTm0YsphS66zJc3JaxZQmsEU9WrZWergdEj5ph4S7jJA&_nc_zt=23&_nc_ht=scontent.fmnl4-1.fna&_nc_gid=MsW4pTsWUWsfTg_r-SNvdQ&oh=00_AfX_PGh4jaPKeaaRWycRpCBtPWHgt79-E0xluq_daOZ8wQ&oe=68B369E4",
+=======
+    status: "Offline",
+    bio: "Casual Gamer",
+    avatarUrl: "https://placehold.co/90x90",
+    heroImage: "https://placehold.co/300x200", // fallback
+>>>>>>> 278e8f7fde60358c54f15dc63b3dc93d7b5c3a63
     games: [  
       { name: "GTA V",          cover: "https://wallpapersok.com/images/high/4k-gta-5-logo-on-plane-above-los-santos-vi4dn38abgxw74qn.jpg",   hours: 348 },
       { name: "FiveM",          cover: "https://scontent.fmnl4-4.fna.fbcdn.net/v/t39.30808-6/465923794_10223383321006323_4841337855170187016_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=2285d6&_nc_eui2=AeE_KEdms7ga47ebLgVGq-dffITKGf1eNrt8hMoZ_V42u-thIXp9NQP-h-fbBqAF6pT4lfxRErzdnaBjwjM_-BXw&_nc_ohc=zAgRsowU3DMQ7kNvwGgpLrz&_nc_oc=Adn1LbnbcxuFpokEVxvDRsODaJ83v8g4BEnxs3ez0sS4nWNhhn2b0sA1cPFjQ8IPabA&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&_nc_gid=FhTFCgdFpO9nf3zJnR9jww&oh=00_AfXgqF2ra8CGrEuAlxRnrh9Hpt3SoL5mu5Z0Vb6nQYrD3w&oe=68B33DF9",       hours: 237 },
@@ -67,6 +82,7 @@ export const Players = [
     status: "Online",
     bio: "Gamer, Developer, Content Creator",
     avatarUrl: "https://placehold.co/90x90",
+    heroImage: "https://placehold.co/300x200", // fallback
     games: [
       { name: "LoL",         cover: "https://placehold.co/300x200?text=LoL",         hours: 250 },
       { name: "Dota 2",      cover: "https://placehold.co/300x200?text=Dota+2",      hours: 110 },
@@ -87,6 +103,7 @@ export const Players = [
     status: "Offline",
     bio: "Gamer, Developer, Content Creator",
     avatarUrl: "https://placehold.co/90x90",
+    heroImage: "https://placehold.co/300x200", // fallback
     games: [
       { name: "Starfield",   cover: "https://placehold.co/300x200?text=Starfield",   hours: 55  },
       { name: "Hades",       cover: "https://placehold.co/300x200?text=Hades",       hours: 140 },
@@ -107,6 +124,7 @@ export const Players = [
     status: "Online",
     bio: "Gamer, Developer, Content Creator",
     avatarUrl: "https://placehold.co/90x90",
+    heroImage: "https://placehold.co/300x200", // fallback
     games: [
       { name: "Fortnite",    cover: "https://placehold.co/300x200?text=Fortnite",    hours: 95  },
       { name: "PUBG",        cover: "https://placehold.co/300x200?text=PUBG",        hours: 180 },
