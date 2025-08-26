@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div>
-      <Topbar onSearch={handleSearch} />
+      <Topbar onSearch={handleSearch} avatarUrl={activeUser.avatarUrl} />
       <main className="layout">
         {/* Sidebar uses full user info */}
         <Sidebar

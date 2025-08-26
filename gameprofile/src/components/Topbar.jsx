@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Topbar({ onSearch }) {
+function Topbar({ onSearch, avatarUrl }) {
   return (
     <header className="topbar">
       <div className="brand">
@@ -23,8 +23,9 @@ function Topbar({ onSearch }) {
           />
         </div>
         <button className="icon-btn">🔔</button>
+        {/* Use avatarUrl from props */}
         <img
-          src="https://placehold.co/36x36"
+          src={avatarUrl || "https://placehold.co/36x36"}
           alt="avatar"
           className="avatar"
         />
@@ -35,6 +36,7 @@ function Topbar({ onSearch }) {
 
 Topbar.propTypes = {
   onSearch: PropTypes.func.isRequired,
+  avatarUrl: PropTypes.string, // new prop
 };
 
 export default Topbar;
