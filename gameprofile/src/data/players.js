@@ -1,7 +1,7 @@
 // Uses the same shape your components expect
 export const Players = [
   {
-    code: "myself",
+    code: "member1",
     name: "Rhozeth Carl Muyot",
     username: "rhozeth",
     status: "Online",
@@ -13,6 +13,11 @@ export const Players = [
       { name: "Minecraft",   cover: "https://placehold.co/300x200?text=Minecraft",   hours: 410 },
       { name: "Stardew",     cover: "https://placehold.co/300x200?text=Stardew",     hours: 85  },
       { name: "Apex",        cover: "https://placehold.co/300x200?text=Apex",        hours: 60  },
+    ],
+        milestones: [
+      "Achieved clutch in Valorant",
+      "Defeated the Ender Dragon in Minecraft",
+      "Completed Elden Ring without dying",
     ],
   },
   {

@@ -1,14 +1,11 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+/* Optional: add gradient or pattern over --bg */
+body {
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(124,92,255,.2), transparent 60%),
+              radial-gradient(800px 600px at 10% 10%, rgba(109,225,255,.18), transparent 60%),
+              var(--bg);
+  min-height: 100vh;
 }
 
 * {
@@ -17,7 +14,6 @@
 
 html, body, #root {
   margin: 0;
-  height: 100%;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
   background: radial-gradient(1200px 800px at 80% -10%, rgba(124,92,255,.2), transparent 60%),
               radial-gradient(800px 600px at 10% 10%, rgba(109,225,255,.18), transparent 60%),

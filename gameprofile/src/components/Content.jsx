@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "./Hero.jsx";
 import MyGames from "./MyGames.jsx";
-import NowPlaying from "./NowPlaying.jsx";
+import Milestones from "./Milestones.jsx";
 import { Players } from "../data/players.js"; // relative path to players.js
 
 function Content({ user }) {
@@ -18,7 +18,7 @@ function Content({ user }) {
         playerName={current.name}
         cardClass="blue" // optional, or you can store in Players
       />
-      <NowPlaying />
+      <Milestones  milestones={current.milestones} />
     </section>
   );
 }
