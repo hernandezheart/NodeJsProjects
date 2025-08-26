@@ -206,10 +206,35 @@
 .section h3{ margin:0 0 12px 0 }
 .section-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:10px }
 
-.game-grid{ display:grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap:14px }
-.game-card{
-  background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column
+
+/* Add the new wrapper class for horizontal scrolling */
+.game-list-wrapper {
+  max-width: 100%;         /* Keeps it inside container */
+  overflow-x: auto;        /* Enables horizontal scroll */
+  padding-bottom: 4px;     /* Space for scrollbar */
 }
+
+.game-grid {
+  display: flex;      /* Prevents wrapping, keeps it in one row */
+  gap: 14px;
+}
+
+.game-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 350px;
+}
+
+.game-list-wrapper.expanded .game-grid {
+  display: grid; /* Switch to grid layout for expanded view */
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  overflow-x: hidden;
+}
+
 .game-cover{
   height:130px; background-size:cover; background-position:center;
   position:relative;
@@ -260,16 +285,16 @@
 }
 
 /* Hide scrollbar for a cleaner look (optional) */
-.milestones-grid::-webkit-scrollbar {
+.game-list-wrapper::-webkit-scrollbar, .milestones-grid::-webkit-scrollbar {
   height: 6px;
 }
 
-.milestones-grid::-webkit-scrollbar-thumb {
+.game-list-wrapper::-webkit-scrollbar-thumb, .milestones-grid::-webkit-scrollbar-thumb {
   background: var(--line);
   border-radius: 9999px;
 }
 
-.milestones-grid::-webkit-scrollbar-track {
+.game-list-wrapper::-webkit-scrollbar-track, .milestones-grid::-webkit-scrollbar-track {
   background: transparent;
 }
 

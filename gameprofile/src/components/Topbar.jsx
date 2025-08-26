@@ -12,14 +12,15 @@ function Topbar({ onSearch }) {
         </div>
       </div>
 
-      {/*tinanggal ko ang laman, di ko malaman san css para maremain ko ung search sa far right hoho*/}
-      <nav className="tabs">
-      </nav>
+      <nav className="tabs"></nav>
 
       <div className="actions">
         <div className="search">
-          <input type="text" placeholder="Type an account..." 
-          onChange={(e) => onSearch(e.target.value)}/>
+          <input
+            type="text"
+            placeholder="Type an account..."
+            onChange={(e) => onSearch(e.target.value)}
+          />
         </div>
         <button className="icon-btn">🔔</button>
         <img

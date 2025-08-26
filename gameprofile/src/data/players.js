@@ -12,10 +12,22 @@ export const Players = [
       { name: "Valorant",    cover: "https://placehold.co/300x200?text=Valorant",    hours: 120 },
       { name: "Minecraft",   cover: "https://placehold.co/300x200?text=Minecraft",   hours: 410 },
       { name: "Stardew",     cover: "https://placehold.co/300x200?text=Stardew",     hours: 85  },
+      { name: "Apex",        cover: "https://placehold.co/300x200?text=Apex",        hours: 60  },  
+      { name: "Valorant",    cover: "https://placehold.co/300x200?text=Valorant",    hours: 120 },
+      { name: "Minecraft",   cover: "https://placehold.co/300x200?text=Minecraft",   hours: 410 },
+      { name: "Stardew",     cover: "https://placehold.co/300x200?text=Stardew",     hours: 85  },
       { name: "Apex",        cover: "https://placehold.co/300x200?text=Apex",        hours: 60  },
+      { name: "Apex",        cover: "https://placehold.co/300x200?text=Apex",        hours: 60  },
+      
     ],
-        milestones: [
+    milestones: [
       "Achieved clutch in Valorant",
+      "Defeated the Ender Dragon in Minecraft",
+      "Completed Elden Ring without dying",
+      "Defeated the Ender Dragon in Minecraft",
+      "Completed Elden Ring without dying",
+      "Defeated the Ender Dragon in Minecraft",
+      "Completed Elden Ring without dying",
       "Defeated the Ender Dragon in Minecraft",
       "Completed Elden Ring without dying",
     ],
@@ -23,16 +35,31 @@ export const Players = [
   {
     code: "member2",
     name: "Heart Hernandez",
-    username: "patchot",
+    username: "goozart",
     status: "Offline",
     bio: "Casual Gamer",
     avatarUrl: "https://placehold.co/90x90",
-    games: [
+    games: [  
       { name: "Minecraft",   cover: "https://placehold.co/300x200?text=Minecraft",   hours: 500 },
       { name: "GTA V",       cover: "https://placehold.co/300x200?text=GTA+V",       hours: 200 },
-      { name: "Rocket League", cover:"https://placehold.co/300x200?text=Rocket",     hours: 75  },
+      { name: "Sims4",       cover:"https://placehold.co/300x200?text=Sims4",        hours: 75  },
       { name: "Roblox",      cover: "https://placehold.co/300x200?text=Roblox",      hours: 90  },
       { name: "CS2",         cover: "https://placehold.co/300x200?text=CS2",         hours: 135 },
+      { name: "Sims4",       cover:"https://placehold.co/300x200?text=Sims4",        hours: 75  },
+      { name: "CS2",         cover: "https://placehold.co/300x200?text=CS2",         hours: 135 },
+      { name: "Sims4",       cover:"https://placehold.co/300x200?text=Sims4",        hours: 75  },
+      { name: "CS2",         cover: "https://placehold.co/300x200?text=CS2",         hours: 135 },
+      { name: "Sims4",       cover:"https://placehold.co/300x200?text=Sims4",        hours: 75  },
+    ],
+    milestones: [
+      "Achieved clutch in Valorant",
+      "Defeated the Ender Dragon in Minecraft",
+      "Completed Elden Ring without dying",
+      "Achieved clutch in Valorant",
+      "Defeated the Ender Dragon in Minecraft",
+      "Completed Elden Ring without dying",
+      "Defeated the Ender Dragon in Minecraft",
+      "Completed Elden Ring without dying",
     ],
   },
   {
@@ -49,6 +76,11 @@ export const Players = [
       { name: "OW2",         cover: "https://placehold.co/300x200?text=OW2",         hours: 80  },
       { name: "Diablo IV",   cover: "https://placehold.co/300x200?text=Diablo+IV",   hours: 35  },
     ],
+    milestones: [
+      "Achieved clutch in Valorant",
+      "Defeated the Ender Dragon in Minecraft",
+      "Completed Elden Ring without dying",
+    ],
   },
   {
     code: "member4",
@@ -64,6 +96,11 @@ export const Players = [
       { name: "FFXIV",       cover: "https://placehold.co/300x200?text=FFXIV",       hours: 300 },
       { name: "Lost Ark",    cover: "https://placehold.co/300x200?text=Lost+Ark",    hours: 60  },
     ],
+    milestones: [
+      "Achieved clutch in Valorant",
+      "Defeated the Ender Dragon in Minecraft",
+      "Completed Elden Ring without dying",
+    ],
   },
   {
     code: "member5",
@@ -78,6 +115,11 @@ export const Players = [
       { name: "COD",         cover: "https://placehold.co/300x200?text=COD",         hours: 260 },
       { name: "Apex",        cover: "https://placehold.co/300x200?text=Apex",        hours: 70  },
       { name: "Halo",        cover: "https://placehold.co/300x200?text=Halo",        hours: 25  },
+    ],
+    milestones: [
+      "Achieved clutch in Valorant",
+      "Defeated the Ender Dragon in Minecraft",
+      "Completed Elden Ring without dying",
     ],
   },
 ];
