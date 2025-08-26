@@ -9,6 +9,7 @@ import Overwatch from "../assets/Overwatch.png";
 import Marvel from "../assets/Marvel.jpg";
 import Sims from "../assets/Sims.jpg";
 import Viper from "../assets/Viper.png";
+import HartHero2 from "../assets/harthero2.png";
 
 
 

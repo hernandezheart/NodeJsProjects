@@ -5,9 +5,9 @@ function Topbar({ onSearch, avatarUrl }) {
   return (
     <header className="topbar">
       <div className="brand">
-        <div className="mark">🎮</div>
+        <div className="mark">🔥</div>
         <div className="brand-text">
-          <span className="brand-top">GameHub</span>
+          <span className="brand-top">EmmanPire</span>
           <span className="brand-sub">Dashboard</span>
         </div>
       </div>
