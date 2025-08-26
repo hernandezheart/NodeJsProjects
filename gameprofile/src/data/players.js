@@ -11,7 +11,7 @@ import Sims from "../assets/Sims.jpg";
 import Viper from "../assets/Viper.png";
 import HartHero2 from "../assets/harthero2.png";
 //Emman Asset
-import Valorant1 from "../assets/Valorant1.jpg";
+import Valorantv1 from "../assets/Valorantv1.jpg";
 import PUBG from "../assets/PUBG.jpg";
 
 
@@ -124,7 +124,7 @@ export const Players = [
     heroImage: "https://placehold.co/300x200", // fallback
     games: [
       //{ name: "Valorant",    cover: " https://wallpapers.com/images/featured/valorant-thumbnail-gtrf9127f9y5jxm3.jpg",    hours: 95  },
-      { name: "Valorant",            cover: Valorant1,     hours: 350 },
+      { name: "Valorant",            cover: Valorantv1,     hours: 350 },
 //      { name: "PUBG",        cover: "https://e1.pxfuel.com/desktop-wallpaper/223/615/desktop-wallpaper-gaming-pubg-mobile-thumbnail-youtube.jpg",        hours: 180 },
       { name: "PUBG",            cover: PUBG,     hours: 350 },
       { name: "COD",         cover: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8f8a8fd3-ddb1-4928-aff3-b2bdd840fe38/dg6jcx0-fdae5e9d-472a-4e60-bfd6-8041a4b698d8.png/v1/fill/w_1600,h_900,q_80,strp/youtube_thumbnail_call_of_duty_by_juzoyena_dg6jcx0-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTAwIiwicGF0aCI6IlwvZlwvOGY4YThmZDMtZGRiMS00OTI4LWFmZjMtYjJiZGQ4NDBmZTM4XC9kZzZqY3gwLWZkYWU1ZTlkLTQ3MmEtNGU2MC1iZmQ2LTgwNDFhNGI2OThkOC5wbmciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.Ez87ohUSePWp3kgrYt_dVmzAorUOMXPt3y9dtg7KJqA",         hours: 260 },
