@@ -47,6 +47,7 @@ export const Players = [
     username: "goozart",
     status: "Online",
     bio: "quack quack",
+    heroImage: HartHero2,
     avatarUrl: "https://scontent.fmnl4-1.fna.fbcdn.net/v/t39.30808-6/480805951_1689258051969002_120274337568902222_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGteieFw_cQYaoW0Zx-nyMBt6iPA-9AMGK3qI8D70AwYi7_JB2i-3FVtxUV3T4U1YEZJn-b8eaCNyP2uQLmyJQG&_nc_ohc=RiWT4cZm_CQQ7kNvwE7Zkdd&_nc_oc=AdmTCnxz54M_V7x_ZsXIVoLtTm0YsphS66zJc3JaxZQmsEU9WrZWergdEj5ph4S7jJA&_nc_zt=23&_nc_ht=scontent.fmnl4-1.fna&_nc_gid=MsW4pTsWUWsfTg_r-SNvdQ&oh=00_AfX_PGh4jaPKeaaRWycRpCBtPWHgt79-E0xluq_daOZ8wQ&oe=68B369E4",
     games: [  
       { name: "GTA V",          cover: "https://wallpapersok.com/images/high/4k-gta-5-logo-on-plane-above-los-santos-vi4dn38abgxw74qn.jpg",   hours: 348 },
