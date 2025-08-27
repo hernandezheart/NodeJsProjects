@@ -10,6 +10,11 @@ import Marvel from "../assets/Marvel.jpg";
 import Sims from "../assets/Sims.jpg";
 import Viper from "../assets/Viper.png";
 import HartHero2 from "../assets/harthero2.png";
+import Ara from '../assets/Ara.png';
+import araHero from '../assets/araHero.png';
+import Genshin from '../assets/genshin.png';
+import ML from '../assets/ml.png';
+import Stardew from '../assets/stardew.png';
 
 
 
@@ -75,20 +80,25 @@ export const Players = [
     name: "Arabela Raine Alfonso",
     username: "sesamehh",
     status: "Online",
-    bio: "Gamer, Developer, Content Creator",
-    avatarUrl: "https://placehold.co/90x90",
-    heroImage: "https://placehold.co/300x200", // fallback
+    bio: "KERATIN?!?!",
+    avatarUrl: Ara,
+    heroImage: araHero, // fallback
     games: [
-      { name: "LoL",         cover: "https://placehold.co/300x200?text=LoL",         hours: 250 },
-      { name: "Dota 2",      cover: "https://placehold.co/300x200?text=Dota+2",      hours: 110 },
-      { name: "Honkai",      cover: "https://placehold.co/300x200?text=Honkai",      hours: 45  },
-      { name: "OW2",         cover: "https://placehold.co/300x200?text=OW2",         hours: 80  },
-      { name: "Diablo IV",   cover: "https://placehold.co/300x200?text=Diablo+IV",   hours: 35  },
+      { name: "Genshin Impact",             cover: Genshin,     hours: 950 },
+      { name: "Minecraft",                  cover: Minecraft,   hours: 810 },
+      { name: "Stardew Valley",             cover: Stardew,     hours: 455  },
+      { name: "Valorant",                   cover: Valorant,    hours: 120  },
+      { name: "Mobile Legends: Bang Bang",  cover: ML,          hours: 80  },
+      { name: "Roblox",                     cover: Roblox,      hours: 45  },
+      { name: "Sims",                       cover: Sims,        hours: 35  },
     ],
     milestones: [
+      "Caught 10 different fish in Stardew Valley",
       "Achieved clutch in Valorant",
       "Defeated the Ender Dragon in Minecraft",
       "Completed Elden Ring without dying",
+      "Reached Grandmaster in 1 week",
+      "Reached Epic in 1 week",
     ],
   },
   {
