@@ -9,6 +9,17 @@ import Overwatch from "../assets/Overwatch.png";
 import Marvel from "../assets/Marvel.jpg";
 import Sims from "../assets/Sims.jpg";
 import Viper from "../assets/Viper.png";
+import RYClove from "../assets/RYClove.png";
+import RYEldenRing from "../assets/RYEldenRing.png";
+import RYItTakesTwo from "../assets/RYItTakesTwo.png";
+import RYLittleNightmares from "../assets/RYLittleNightmares.png";
+import RYMinecraft from "../assets/RYMinecraft.png";
+import RYValorant from "../assets/RYValorant.png";
+import Ry from "../assets/Ry.jpg";
+
+
+
+
 
 
 
@@ -98,14 +109,14 @@ export const Players = [
     username: "Azelea",
     status: "Offline",
     bio: "Gamer, Developer, Content Creator",
-    avatarUrl: "https://placehold.co/90x90",
-    heroImage: "https://placehold.co/300x200", // fallback
+    avatarUrl: Ry,
+    heroImage: RYClove, // fallback
     games: [
-      { name: "Starfield",   cover: "https://placehold.co/300x200?text=Starfield",   hours: 55  },
-      { name: "Hades",       cover: "https://placehold.co/300x200?text=Hades",       hours: 140 },
-      { name: "PoE",         cover: "https://placehold.co/300x200?text=PoE",         hours: 220 },
-      { name: "FFXIV",       cover: "https://placehold.co/300x200?text=FFXIV",       hours: 300 },
-      { name: "Lost Ark",    cover: "https://placehold.co/300x200?text=Lost+Ark",    hours: 60  },
+      { name: "Elden Ring",         cover: RYEldenRing,        hours: 155  },
+      { name: "It Takes Two",       cover: RYItTakesTwo,       hours: 240 },
+      { name: "Little Nightmares",  cover: RYLittleNightmares, hours: 590 },
+      { name: "Minecraft",          cover: RYMinecraft,        hours: 500 },
+      { name: "Valorant",           cover: RYValorant,         hours: 217  },
     ],
     milestones: [
       "Achieved clutch in Valorant",
