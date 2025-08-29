@@ -1,10 +1,9 @@
-
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-
+ 
 function MyGames({ games, playerName }) {
   const [isExpanded, setIsExpanded] = useState(false);
-
+ 
   if (!games || games.length === 0) {
     return (
       <div className="section">
@@ -13,57 +12,58 @@ function MyGames({ games, playerName }) {
       </div>
     );
   }
-
-  // Show only first 5 games unless expanded
+ 
+  // Limit to 5 games unless expanded
   const visibleGames = isExpanded ? games : games.slice(0, 5);
-
+ 
   return (
-    <div className="section">
-      <div className="section-head">
-        <h3>{playerName}’s Games</h3>
-        {games.length > 5 && (
-          <button
-            className="btn small"
-            onClick={() => setIsExpanded(!isExpanded)}
-          >
-            {isExpanded ? "View Less" : "View All"}
-          </button>
-        )}
-      </div>
-
-      <div className="game-list-wrapper">
-        <div className="game-grid-horizontal">
-          {visibleGames.map((game, i) => (
-            <div className="game-card" key={i}>
-              <div
-                className="game-cover"
-                style={{
-                  backgroundImage: `url(${game.cover || "https://placehold.co/300x200"})`,
-                }}
-              >
-                {game.hours > 300 && <span className="badge">Grinder 🔥</span>}
+  <div className="section section-gradient">
+    <div className="section-head">
+      <h3>{playerName}’s Games</h3>
+      {games.length > 5 && (
+        <button
+          className="btn small"
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          {isExpanded ? "Show Less" : "Show More"}
+        </button>
+      )}
+    </div>
+ 
+    <div className="game-list-wrapper">
+      <div className="game-grid-horizontal">
+        {visibleGames.map((game, i) => (
+          <div className={`game-card ${getGlow(game.hours)}`} key={i}>
+            <div
+              className="game-cover"
+              style={{
+                backgroundImage: `url(${game.cover || "https://placehold.co/300x200"})`,
+              }}
+            >
+              {game.hours > 300 && <span className="badge">Grinder 🔥</span>}
+            </div>
+ 
+            <div className="game-meta">
+              <div className="title-row">
+                <h4 className="game-title">{game.name}</h4>
+                {game.hours && <span className="pill">{game.hours} hrs</span>}
               </div>
-
-              <div className="game-meta">
-                <div className="title-row">
-                  <h4 className="game-title">{game.name}</h4>
-                  {game.hours && <span className="pill">{game.hours} hrs</span>}
-                </div>
-                <div className="sub-row">
-                  <span className="np-sub">
-                    {game.hours >= 100 ? "Veteran Player" : "Casual Player"}
-                  </span>
-                  <button className="btn small">Play</button>
-                </div>
+              <div className="sub-row">
+                <span className="np-sub">
+                  {game.hours >= 100 ? "Veteran Player" : "Casual Player"}
+                </span>
+                <button className="btn small">Play</button>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
-  );
+  </div>
+);
+ 
 }
-
+ 
 MyGames.propTypes = {
   games: PropTypes.arrayOf(
     PropTypes.shape({
@@ -74,5 +74,12 @@ MyGames.propTypes = {
   ).isRequired,
   playerName: PropTypes.string.isRequired,
 };
-
+ 
+function getGlow(hours) {
+  if (hours > 300) return "glow";
+  if (hours >= 100) return "glow";
+  if (hours >= 21) return "glow";
+  return "glow-none";
+}
+ 
 export default MyGames;

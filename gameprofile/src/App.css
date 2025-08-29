@@ -12,23 +12,33 @@
   --radius:18px;
   --shadow:0 10px 30px rgba(0,0,0,.35);
 }
-
+ 
 /* Topbar */
-.topbar{
-  display:flex; align-items:center; gap:24px;
-  padding:14px 22px;
-  border-bottom:1px solid var(--line);
-  position:sticky; top:0; z-index:5;
-  background:linear-gradient(180deg, rgba(11,11,18,.9), rgba(11,11,18,.7));
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 22px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+ 
+  /* splash art as background */
+  background:
+    url("https://i.pinimg.com/736x/0c/39/27/0c3927cfe9ae7d349dafdb1218699d63.jpg") center/cover no-repeat,
+    linear-gradient(180deg, rgba(11,11,18,.9), rgba(11,11,18,.7));
   backdrop-filter: blur(8px);
+  background-blend-mode: overlay; /* keeps gradient readable */
 }
-
+ 
+ 
 .brand{ display:flex; align-items:center; gap:10px; min-width:220px }
 .mark{ width:34px; height:34px; display:grid; place-items:center; background:var(--panel-2); border-radius:10px; box-shadow: var(--shadow)}
 .brand-text{ display:flex; flex-direction:column; line-height:1 }
 .brand-top{ font-weight:800; letter-spacing:.2px }
 .brand-sub{ color:var(--muted); font-size:12px }
-
+ 
 .tabs{ display:flex; gap:6px; flex:1 }
 .tab{
   background:transparent; border:1px solid transparent; color:var(--muted);
@@ -36,7 +46,7 @@
 }
 .tab.active{ color:var(--text); background:var(--panel-2); border-color:var(--line) }
 .tab:hover{ color:var(--text) }
-
+ 
 .actions{ display:flex; align-items:center; gap:10px }
 .search{
   display:flex; align-items:center; gap:8px; padding:8px 12px;
@@ -49,18 +59,18 @@
   width:38px; height:38px; border-radius:12px; background:var(--panel-2);
   border:1px solid var(--line); display:grid; place-items:center; cursor:pointer;
 }
-.avatar{ 
+.avatar{
   width:36px; height:36px; border-radius:50%; border:2px solid var(--line);
   position: relative;
 }
 .avatar.xl{ width:90px; height:90px }
 .avatar.sm{ width:26px; height:26px }
-
+ 
 /* Floating effect */
 .floating-avatar {
   animation: floatAvatar 3s ease-in-out infinite;
 }
-
+ 
 @keyframes floatAvatar {
   0%, 100% {
     transform: translateY(0) scale(1);
@@ -69,13 +79,13 @@
     transform: translateY(-8px) scale(1.05);
   }
 }
-
+ 
 /* Status dot */
 .avatar-wrapper {
   position: relative;
   display: inline-block;
 }
-
+ 
 .status-indicator {
   position: absolute;
   bottom: 3px;
@@ -86,18 +96,63 @@
   border: 2px solid var(--line);
   border-radius: 50%;
 }
-
+ 
 .status-offline {
   background-color: #ef4444; /* red = offline */
 }
-
+ 
 /* Layout */
 .layout{ display:grid; grid-template-columns: 280px 1fr; gap:22px; padding:22px; }
-.sidebar{
-  position:sticky; top:70px; align-self:start;
-  background:var(--panel); border:1px solid var(--line); border-radius: var(--radius);
-  padding:18px; box-shadow: var(--shadow);
+/* Sidebar with splash art + glow */
+.sidebar {
+  position: sticky;
+  top: 70px;
+  align-self: start;
+  background: url('https://i.pinimg.com/1200x/34/8a/c7/348ac7e5cb630aeea0eb1eef3729e7e9.jpg') center/cover no-repeat; /* splash art */
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
 }
+ 
+/* Overlay to keep text visible */
+.sidebar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,20,30,0.8), rgba(10,10,15,0.6));
+  z-index: 0;
+}
+ 
+/* Sidebar content sits above overlay */
+.sidebar > * {
+  position: relative;
+  z-index: 1;
+}
+ 
+/* Animated glow effect like Hero */
+.sidebar::after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  right: -20%;
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(from 20deg, #2a0f3d,  /* deep violet */
+  #3b1c5c, transparent 70%);
+  filter: blur(40px);
+  border-radius: 50%;
+  animation: spin 15s linear infinite;
+  z-index: 0;
+}
+ 
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+ 
 .profile-card{ display:flex; flex-direction:column; align-items:center; gap:10px; margin-bottom:18px }
 .profile-name{ font-weight:700; font-size:18px }
 .profile-sub{ color:var(--muted); font-size:12px }
@@ -107,7 +162,7 @@
   border-radius:999px; font-size:12px;
 }
 .toggle-pill.active{ background:rgba(124,92,255,.18); border-color:rgba(124,92,255,.4); color:#dcd6ff }
-
+ 
 .side-nav{ display:grid; gap:6px; margin:18px 0 }
 .side-link{
   display:flex; align-items:center; gap:12px; width:100%;
@@ -115,7 +170,7 @@
   border:1px solid transparent; cursor:pointer; text-align:left;
 }
 .side-link.active, .side-link:hover{ background:var(--panel-2); color:var(--text); border-color:var(--line) }
-
+ 
 .btn{
   background:var(--panel-2); border:1px solid var(--line); color:var(--text);
   padding:10px 14px; border-radius:12px; cursor:pointer;
@@ -123,15 +178,15 @@
 .btn.primary{ background: linear-gradient(135deg, var(--accent), #9b7dff); border-color:transparent }
 .btn.small{ padding:8px 12px; font-size:12px }
 .btn.wide{ width:100%; margin-top:10px }
-
+ 
 .content{ min-height:60vh }
-
+ 
 /* Sidebar Bio */
 .profile-bio {font-size: 13px; color: var(--muted); text-align: center; margin-top: 6px; line-height: 1.4; max-width: 220px;}
-
+ 
 /* Friends list */
 .friends-list {display: flex; flex-direction: column; gap: 8px; margin-top: 18px;}
-
+ 
 .friends-list h4 {
   margin: 0 0 6px 0;
   font-size: 18px;
@@ -140,7 +195,7 @@
   border-bottom: 1px solid var(--line);
   padding-bottom: 4px;
 }
-
+ 
 .friend-item {
   display: flex;
   align-items: center;
@@ -152,23 +207,71 @@
   transition: background 0.2s;
   margin-bottom: 6px;
 }
-
+ 
 .friend-item:hover {
   background: var(--panel);
 }
-
+ 
 .friend-item .avatar.sm {
   border: 1px solid var(--line);
 }
-
-
+ 
+ 
 /* Hero */
-.hero{
-  display:grid; grid-template-columns: 1.15fr .85fr; gap:22px;
-  background:linear-gradient(120deg, rgba(124,92,255,.18), rgba(109,225,255,.12));
-  border:1px solid var(--line); border-radius: var(--radius); padding:18px; margin-bottom:22px;
-  overflow:hidden; position:relative;
+/* Hero with splash art background */
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 22px;
+  background: url('https://i.pinimg.com/736x/32/fb/ea/32fbead1b9327d3c8bf812907eb7658e.jpg') center/cover no-repeat; /* splash art */
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  position: relative;
 }
+ 
+/* Overlay gradient to keep text readable */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(20,20,30,0.6), rgba(10,10,15,0.4));
+  z-index: 0;
+}
+ 
+/* Make sure content stays above overlay */
+.hero-left, .hero-right {
+  position: relative;
+  z-index: 1;
+}
+ 
+/* Keep glow/animation in hero-right */
+.hero-right {
+  position: relative;
+  background: radial-gradient(400px 300px at 70% 30%, rgba(124,92,255,.35), transparent 60%);
+  border-left: 1px dashed rgba(124,92,255,.25);
+  border-radius: calc(var(--radius) - 8px);
+  overflow: hidden;
+}
+ 
+/* Animated glow behind character */
+.hero-right .eight {
+  position: absolute;
+  inset: -20% -10% -20% auto;
+  width: 70%;
+  filter: blur(40px);
+  background: conic-gradient(from 20deg, rgba(124,92,255,.55), rgba(109,225,255,.5), transparent 70%);
+  border-radius: 50%;
+  animation: spin 12s linear infinite; /* animation added */
+}
+ 
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+ 
 .hero-left{ display:flex; flex-direction:column; gap:14px }
 .hero-title{ margin:0; font-size:22px; letter-spacing:.2px }
 .muted{ color:var(--muted); font-weight:500 }
@@ -177,14 +280,14 @@
 .hero-actions{ display:flex; gap:10px }
 .mini-row{ display:flex; align-items:center; gap:10px; margin-top:6px }
 .mini-stats{ display:flex; gap:8px; flex-wrap:wrap }
-
+ 
 .pill{
   display:inline-flex; align-items:center; gap:6px; font-size:12px;
   border:1px solid var(--line); padding:6px 10px; border-radius:999px; background:var(--panel-2);
 }
 .pill.ghost{ background:transparent }
 .rating{ display:inline-flex; align-items:center; gap:6px; color:#ffd976 }
-
+ 
 .hero-right{
   position:relative; background: radial-gradient(400px 300px at 70% 30%, rgba(124,92,255,.35), transparent 60%);
   border-left:1px dashed rgba(124,92,255,.25);
@@ -200,49 +303,51 @@
   position:absolute; right:8%; bottom:-6px; width:60%; max-width:390px;
   border-radius:20px; box-shadow: 0 20px 60px rgba(0,0,0,.45);
 }
-
+ 
 /* Sections */
 .section{ background:var(--panel); border:1px solid var(--line); border-radius: var(--radius); padding:18px; box-shadow: var(--shadow); margin-bottom:22px }
 .section h3{ margin:0 0 12px 0 }
 .section-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:10px }
-
+ 
 /* Horizontal scroll wrapper for MyGames */
 .game-list-wrapper {
   overflow-x: auto;       /* enable horizontal scroll */
   padding-bottom: 6px;    /* avoid scrollbar overlaying content */
 }
-
+ 
 .game-list-wrapper::-webkit-scrollbar {
   height: 6px;
 }
-
+ 
 .game-list-wrapper::-webkit-scrollbar-thumb {
   background: var(--line);
   border-radius: 9999px;
 }
-
+ 
 .game-list-wrapper::-webkit-scrollbar-track {
   background: transparent;
 }
-
+ 
 /* Horizontal grid inside the scroll wrapper */
 .game-grid-horizontal {
   display: flex;
   gap: 14px;
   flex-wrap: nowrap;  /* keep all cards in a single row */
 }
-
+ 
 .game-card {
   flex: 0 0 auto;     /* prevent shrinking */
-  width: 200px;       /* fixed width for card */
+  width: 190px;       /* fixed width for card */
   background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 14px;
+  border: 15px solid var(--line);
+  border-radius: 24px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin-left: 5px;
+  margin-top: 10px;
 }
-
+ 
 /* Game cover inside card */
 .game-cover {
   height: 120px;
@@ -250,7 +355,7 @@
   background-position: center;
   position: relative;
 }
-
+ 
 .badge {
   position: absolute;
   top: 8px;
@@ -262,7 +367,7 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(6px);
 }
-
+ 
 /* Game metadata */
 .game-meta {
   padding: 10px;
@@ -270,13 +375,13 @@
   flex-direction: column;
   gap: 6px;
 }
-
+ 
 .title-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
+ 
 .pill {
   display: inline-block;
   background: var(--panel-2);
@@ -286,7 +391,7 @@
   font-size: 12px;
   font-weight: 600;
 }
-
+ 
 .sub-row {
   display: flex;
   justify-content: space-between;
@@ -294,12 +399,12 @@
   font-size: 12px;
   color: var(--muted);
 }
-
+ 
 /* Ensure Content does not create global horizontal scroll */
 .content {
   overflow-x: hidden;
 }
-
+ 
 /* Horizontal Milestones */
 .milestones-grid {
   display: flex;
@@ -307,7 +412,7 @@
   overflow-x: auto;
   padding-bottom: 4px; /* optional: avoid scrollbar overlay */
 }
-
+ 
 .milestone-card {
   flex: 0 0 auto; /* ensures cards don't shrink */
   display: flex;
@@ -320,36 +425,36 @@
   transition: transform 0.2s, background 0.2s;
   cursor: default;
 }
-
+ 
 .milestone-card:hover {
   background: var(--panel);
   transform: translateY(-2px);
 }
-
+ 
 .milestone-icon {
   font-size: 20px;
 }
-
+ 
 .milestone-text {
   font-weight: 600;
   font-size: 14px;
   color: var(--text);
 }
-
+ 
 /* Hide scrollbar for a cleaner look (optional) */
 .milestones-grid::-webkit-scrollbar {
   height: 6px;
 }
-
+ 
 .milestones-grid::-webkit-scrollbar-thumb {
   background: var(--line);
   border-radius: 9999px;
 }
-
+ 
 .milestones-grid::-webkit-scrollbar-track {
   background: transparent;
 }
-
+ 
 /* Responsive */
 @media (max-width: 1100px){
   .layout { grid-template-columns: 1fr; }
@@ -362,4 +467,111 @@
   .tabs{ display:none }
   .game-grid{ grid-template-columns: repeat(2, 1fr); }
   .now-playing{ grid-template-columns: 1fr; }
+}
+ 
+/* Cyberpunk-style game cards without flicker */
+.game-card {
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #0f0f14, #1a1a26); /* dark base */
+  box-shadow:
+    0 0 10px rgba(124, 92, 255, 0.3),
+    0 0 20px rgba(109, 225, 255, 0.2); /* soft neon glow */
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  position: relative;
+}
+ 
+/* Neon glow variants (static, no flicker) */
+.glow-purple {
+  border-color: #b066ff;
+  box-shadow: 0 0 8px #b066ff, 0 0 20px rgba(176, 102, 255, 0.5);
+}
+ 
+ 
+.glow-pink {
+  border-color: #ff2e92;
+  box-shadow:
+    0 0 10px #ff2e92,
+    0 0 25px rgba(255, 46, 146, 0.6);
+}
+ 
+.glow-teal {
+  border-color: #00ffc6;
+  box-shadow:
+    0 0 10px #00ffc6,
+    0 0 25px rgba(0, 255, 198, 0.6);
+}
+ 
+.glow-none {
+  border-color: var(--line);
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+ 
+/* Hover effect for all cards */
+.game-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow:
+    0 0 15px rgba(124, 92, 255, 0.5),
+    0 0 30px rgba(109, 225, 255, 0.4);
+}
+ 
+/* Optional: Animated gradient overlay for cyberpunk effect */
+.game-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(45deg, #ff0080, #00ffff, #ff00ff, #ff7f00);
+  background-size: 400% 400%;
+  opacity: 0.2;
+  pointer-events: none;
+  animation: gradientShift 6s ease infinite;
+}
+ 
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+ 
+ 
+.section-gradient {
+  position: relative;      /* required for pseudo-elements */
+  border-radius: var(--radius);
+  padding: 18px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  overflow: hidden;
+ 
+ 
+/* milestone and mygame bg */
+ 
+  background: linear-gradient(135deg,
+  #2a0f3d,  
+  #3b1c5c,  
+);
+  background-size: 400% 400%;
+  animation: darkGradient 20s ease infinite;
+}
+ 
+@keyframes darkGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+ 
+.section-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://i.pinimg.com/1200x/59/76/38/59763868bbac1f775b506b3f9693be84.jpg') no-repeat center/cover;
+  opacity: 0.1;            
+  z-index: 0;              
+}
+ 
+.section-gradient > * {
+  position: relative;
+  z-index: 1;
 }

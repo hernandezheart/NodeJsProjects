@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+ 
 function Milestones({ milestones }) {
   return (
-    <div className="section">
+    <div className="section section-gradient">
       <div className="section-head">
         <h3>Milestones</h3>
       </div>
@@ -18,13 +18,14 @@ function Milestones({ milestones }) {
     </div>
   );
 }
-
+ 
 Milestones.propTypes = {
   milestones: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
-
+ 
 Milestones.defaultProps = {
   milestones: [],
 };
-
+ 
 export default Milestones;
+ 
